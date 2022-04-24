@@ -8,7 +8,7 @@ import Layout from '../components/layout'
 // import blocks
 import ThreeCol from '../components/blocks/3col'
 import Feature from '../components/blocks/feature'
-import CTA from '../components/blocks/cta'
+import Cta from '../components/blocks/cta'
 import Hero from '../components/blocks/hero'
 
 class BlocksTemplate extends React.Component {
@@ -24,16 +24,16 @@ class BlocksTemplate extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
-        {post.frontmatter.blocks.map(block => {
+        {post.frontmatter.blocks.map((block, i) => {
           switch (block.component) {
             case '3col':
-              return <ThreeCol block={block} />
+              return <ThreeCol block={block} key={i} />
             case 'feature':
-              return <Feature block={block} />
+              return <Feature block={block} key={i} />
             case 'cta':
-              return <CTA block={block} />
+              return <Cta block={block} key={i} />
             case 'hero':
-              return <Hero block={block} />
+              return <Hero block={block} key={i} />
             default:
               return ''
           }

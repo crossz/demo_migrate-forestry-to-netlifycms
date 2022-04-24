@@ -1,20 +1,25 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 
 import { graphql, StaticQuery } from 'gatsby'
 
-class Navbar extends Component {
-  state = {
-    navbarOpen: false,
-  }
+// class Navbar extends Component {
+const Navbar = (props) => {
 
-  toggleNavState = () => {
-    this.setState({
-      navbarOpen: !this.state.navbarOpen,
+  const [navState, setNavState] = useState(
+    {
+      navbarOpen: false,
+    }
+  )
+  
+
+  const toggleNavState = () => {
+    setNavState({
+      navbarOpen: !navState.navbarOpen,
     })
   }
 
-  render() {
+  // render() {
     return (
       <nav
         className="navbar is-primary main-navigation"
@@ -26,14 +31,16 @@ class Navbar extends Component {
             className="navbar-item has-text-weight-semibold"
             to="/"
           >
-            {this.props.siteTitle}
+            {props.siteTitle}
           </Link>
 
           <span
-            onClick={this.toggleNavState}
+            onClick={toggleNavState}
+            onKeyDown={toggleNavState} // aria-hidden="true"
             role="button"
+            tabIndex={0}
             className={
-              this.state.navbarOpen
+              navState.navbarOpen
                 ? 'navbar-burger burger is-active'
                 : 'navbar-burger burger'
             }
@@ -49,7 +56,7 @@ class Navbar extends Component {
         <div
           id="mainMenu"
           className={
-            this.state.navbarOpen ? 'navbar-menu is-active' : 'navbar-menu'
+            navState.navbarOpen ? 'navbar-menu is-active' : 'navbar-menu'
           }
         >
           <div className="navbar-start">
@@ -96,7 +103,7 @@ class Navbar extends Component {
         </div>
       </nav>
     )
-  }
+  // }
 }
 
 export default Navbar

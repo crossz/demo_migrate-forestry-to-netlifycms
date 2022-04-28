@@ -92,6 +92,7 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
+// Ref: https://www.gatsbyjs.com/plugins/gatsby-source-filesystem/
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 

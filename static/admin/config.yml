@@ -14,34 +14,10 @@ public_folder: /images
 
 
 collections:
-  - name: "blog"
-    label: "Posts"
-    folder: "src/pages/posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string"}
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown"}
-
-
 
   - name: "pages"
     label: "Pages"
     files:
-      - file: "src/pages/about-the-demo.md"
-        label: "About"
-        name: "about"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              # default: "about-page",
-            }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
-
       - file: "src/pages/index.md"
         label: "Landing Page"
         name: "index"
@@ -54,27 +30,54 @@ collections:
               label: "Template Key",
               name: "template",
               widget: "hidden",
-              # default: "index-page",
+              # default: "",
             }
+          - { label: "Title", name: "title", widget: "string" }
+          # - {
+          #     label: Mainpitch,
+          #     name: mainpitch,
+          #     widget: object,
+          #     fields:
+          #       [
+          #         {
+          #           label: "Template Key",
+          #           name: "template",
+          #           widget: "hidden",
+          #       # default: "index-page",
+          #         },
+                  
+          #         { label: Title, name: title, widget: string },
+          #         { label: Description, name: description, widget: text },
+          #       ],
+          #   }
           - {
-              label: Mainpitch,
-              name: mainpitch,
+              label: block__hero,
+              name: block__hero,
               widget: object,
               fields:
                 [
-                  {
-                    label: "Template Key",
-                    name: "template",
-                    widget: "hidden",
-                # default: "index-page",
-                  },
-                  
+                  # { label: "Template Key", name: "template", widget: "hidden" },
+                  { label: "Component", name: "component", widget: "string" },
+                  { label: "Background", name: "background", widget: "string" },
                   { label: Title, name: title, widget: string },
-                  { label: Description, name: description, widget: text },
+                  { label: Subtitle, name: subtitle, widget: text },
                 ],
             }
 
 
+
+      - file: "src/pages/about-the-demo.md"
+        label: "About"
+        name: "about"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              # default: "about-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
 
 
 #           - { label: Description, name: description, widget: string }
@@ -138,4 +141,15 @@ collections:
 #           #         },
 #           #       ],
 #           #   }
+
+  - name: "blog"
+    label: "Posts"
+    folder: "src/pages/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string"}
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown"}
+
 

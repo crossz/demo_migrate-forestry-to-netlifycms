@@ -27,7 +27,7 @@ collections:
           #   widget: categories
           #   separator: __
 
-          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Title", name: "title", widget: string }
           - { label: "Template Key", name: "template", widget: hidden, default: "" }
           - { label: "Blocks", name: "blocks", widget: list, ## object is no good
               fields: [
@@ -40,7 +40,7 @@ collections:
 
       - file: "src/pages/about-the-demo.md"
         label: "About"
-        name: "about"
+        name: "about-the-demo"
         fields:
           - {
               label: "Template Key",
@@ -48,8 +48,8 @@ collections:
               widget: "hidden",
               # default: "about-page",
             }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Title", name: "title", widget: string }
+          - { label: "Body", name: "body", widget: markdown }
 
   - name: "blog"
     label: "Posts"
@@ -57,8 +57,8 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string"}
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: string}
+      - { label: "Publish Date", name: "date", widget: datetime }
+      - { label: "Body", name: "body", widget: markdown}
 
 

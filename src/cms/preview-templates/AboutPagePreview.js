@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 // import { AboutPageTemplate } from '../../templates/about-page'
 import PageContent from "../../components/Content";
-// import '../css/main.scss'
 
 export const AboutPageTemplate = ({ title, content }) => {  
   return (

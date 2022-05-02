@@ -1,6 +1,6 @@
 import CMS from 'netlify-cms-app'
 import AboutPagePreview from './preview-templates/AboutPagePreview'
-
+import IndexPagePreview from './preview-templates/IndexPagePreview'
 
 // // // // Initialize the CMS object
 // CMS.init()
@@ -11,6 +11,7 @@ import AboutPagePreview from './preview-templates/AboutPagePreview'
 // // // // import IndexPagePreview from './preview-templates/IndexPagePreview'
 
 CMS.registerPreviewTemplate('about-the-demo', AboutPagePreview)
+CMS.registerPreviewTemplate('index', IndexPagePreview)
 
 // // // // Now the registry is available via the CMS object.
 // // CMS.registerPreviewTemplate('index', IndexPagePreview)

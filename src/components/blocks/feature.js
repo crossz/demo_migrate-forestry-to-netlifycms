@@ -1,4 +1,5 @@
 import React from 'react'
+import PreviewCompatibleImage from "../PreviewCompatibleImage";
 
 const Feature = ({ block }) => (
   <section
@@ -19,12 +20,16 @@ const Feature = ({ block }) => (
           }
         >
           <div className="column is-one-half">
-            {block.image && (
-              <img
-                alt={block.title}
-                srcSet={block.image.childImageSharp.fluid.srcSet}
-              />
-            )}
+            {console.log(typeof block.image === "string")}
+            {block.image && 
+            typeof block.image === "string"
+            ?  <PreviewCompatibleImage imageInfo={{image: block.image}} />
+            :  <PreviewCompatibleImage imageInfo={block.image} />
+              // <img
+              //   alt={block.title}
+              //   srcSet={block.image.childImageSharp.fluid.srcSet}
+              // />
+            }
           </div>
           <div className="column is-one-half">
             <div className="section">

@@ -33,15 +33,15 @@ collections:
               fields: [
                 { name: "component", widget: string }, 
                 { label: "Background", name: "background", widget: string },
-                { label: "Image", name: "image", widget: image } , 
-                  # fields: [
-                  #   { label: ChildImageSharp, name: childImageSharp, widget: object,
-                  #   fields: [
-                  #     { label: Fluid, name: fluid, widget: string}
-                  #   ]
-                  # }, 
-                  # ]
-                #  },
+                { label: "Image", name: "image", widget: object,
+                  fields: [
+                    { label: ChildImageSharp, name: childImageSharp, widget: object,
+                    fields: [
+                      { label: Fluid, name: fluid, widget: string}
+                    ]
+                  }, 
+                  ]
+                 },
                 { label: Title, name: title, widget: string },
                 { label: Subtitle, name: subtitle, widget: text },
               ]

@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import '../../css/main.scss'
 // import { IndexPageTemplate } from '../../templates/index-page'
 // import PageContent from "../../components/Content";
 
@@ -22,11 +23,7 @@ export const IndexPageTemplate = ({ title, content }) => {
   const blocks = content
   
   return (
-    <section className="section page-content">
-      <h1>
-        {title}
-      </h1>
-      
+    <div>  
       {blocks.map((block, i) => {
       // {blocks.map((block_it, i) => {
         // const block = constructObject(Array.from(block_it))
@@ -43,8 +40,7 @@ export const IndexPageTemplate = ({ title, content }) => {
             return ''
         }
       })}
-      
-    </section>
+    </div>
   )
 }
 

@@ -1,19 +1,24 @@
 ---
 title: What is this?
+description: ''
+date: 
 
 ---
+Cross test1
+
 You're currently viewing a demo site built with [GatsbyJS](https://www.gatsbyjs.org/) and [Forestry](https://forestry.io). This website is meant to demonstrate some of the features of Forestry's CMS and how it integrates with the Gatsby static site generator, but you are encouraged to copy it, hack on it, and make it your own!
 
 [About Gatsby »](/about-the-ssg)
 
 ## Demo Features
+
 This demo is heavily influenced by Gatsby's [tutorial for using Markdown](https://www.gatsbyjs.org/docs/adding-markdown-pages/) and Kyle Mathews' [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog). It is intended to serve as a starting point for developing markdown websites using Gatsby. Among its features are:
 
-- Pages created from markdown files
-- _List_ and _single_ templates (add an `index.md` file to a directory to create a list page for the directory's contents)
-- Styling with Sass and [Bulma](https://bulma.io)
-- A _blocks_ template to use with Forestry's [blocks](https://forestry.io/docs/settings/fields/blocks/) page builder capability.
-- CMS-friendly content strategy, such as defining main navigation items in a JSON file.
+* Pages created from markdown files
+* _List_ and _single_ templates (add an `index.md` file to a directory to create a list page for the directory's contents)
+* Styling with Sass and [Bulma](https://bulma.io)
+* A _blocks_ template to use with Forestry's [blocks](https://forestry.io/docs/settings/fields/blocks/) page builder capability.
+* CMS-friendly content strategy, such as defining main navigation items in a JSON file.
 
 ## How to Use This With Forestry
 

@@ -25,3 +25,5 @@ fields:
     schema:
       format: markdown
   label: description
+pages:
+- src/pages/page1withfieldsonly.md

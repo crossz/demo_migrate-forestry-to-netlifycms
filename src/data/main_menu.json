@@ -1,11 +1,6 @@
 [
   {
     "type": "internal",
-    "url": "/page1withContentAare",
-    "title": "page1withContentAare"
-  },
-  {
-    "type": "internal",
     "url": "/",
     "title": "Home"
   },
@@ -23,5 +18,10 @@
     "type": "internal",
     "url": "/posts",
     "title": "Blog"
+  },
+  {
+    "type": "internal",
+    "url": "/page1withContentAare",
+    "title": "page1withContentAare"
   }
 ]

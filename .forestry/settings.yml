@@ -14,6 +14,8 @@ sections:
   new_doc_ext: md
   templates:
   - page
+  - pagewithfiledsonly
+  - pagewithcontentarea
   - blocks-page
 - type: directory
   path: src/pages/posts

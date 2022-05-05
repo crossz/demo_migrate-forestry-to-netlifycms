@@ -1,21 +1,12 @@
 ---
-label: pagewithcontentarea
-hide_body: false
+label: pagewithfiledsonly
+hide_body: true
 fields:
 - name: title
   type: text
   config:
     required: false
   label: title
-- name: description
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: description
 - name: date
   type: datetime
   label: date
@@ -25,3 +16,12 @@ fields:
     date_format: 
     time_format: 
     display_utc: false
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: description
